@@ -184,6 +184,7 @@ class Commit(models.Model):
     revision = models.CharField(max_length=40, db_index=True)
     author = models.CharField(max_length=150)
     comments = models.TextField()
+    searchable_data = models.TextField(null=True, blank=True)
 
     class Meta:
         db_table = "commit"
